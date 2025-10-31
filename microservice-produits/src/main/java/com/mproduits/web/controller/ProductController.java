@@ -18,15 +18,12 @@ public class ProductController {
     ProductDao productDao;
 
     // Affiche la liste de tous les produits disponibles
-    @GetMapping(value = "/Produits")
+    @GetMapping("/Produits")
     public List<Product> listeDesProduits(){
 
         List<Product> products = productDao.findAll();
-
         if(products.isEmpty()) throw new ProductNotFoundException("Aucun produit n'est disponible à la vente");
-
         return products;
-
     }
 
     //Récuperer un produit par son id
@@ -34,9 +31,7 @@ public class ProductController {
     public Optional<Product> recupererUnProduit(@PathVariable int id) {
 
         Optional<Product> product = productDao.findById(id);
-
         if(!product.isPresent())  throw new ProductNotFoundException("Le produit correspondant à l'id " + id + " n'existe pas");
-
         return product;
     }
 }
