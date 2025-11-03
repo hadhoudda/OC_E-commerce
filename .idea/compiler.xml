@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mproduits" />
+        <module name="config-server" />
         <module name="mpaiement" />
         <module name="mcommandes" />
         <module name="client-ui" />
@@ -20,6 +21,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="client-ui" options="-parameters" />
       <module name="clientui" options="-parameters" />
+      <module name="config-server" options="-parameters" />
       <module name="mcommandes" options="-parameters" />
       <module name="mpaiement" options="-parameters" />
       <module name="mproduits" options="-parameters" />
